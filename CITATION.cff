@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "REA Reverse Engineering Skill"
+type: software
+abstract: "Portable, evidence-first AI-agent workflow for lawful reverse engineering with REA."
+license: MIT
+version: "2.0.0"
+repository-code: "https://github.com/dairymatrix-collab/ai-reverse-engineering-agent-skill"
+keywords:
+  - ai-agent-skill
+  - reverse-engineering
+  - binary-analysis
+  - mcp
+  - static-analysis
+  - evidence-ledger
