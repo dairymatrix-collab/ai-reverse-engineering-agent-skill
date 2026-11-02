@@ -23,6 +23,7 @@ Thank you for improving this AI-agent skill.
 
 ```bash
 python3 -m py_compile scripts/create_manifest.py
+python3 -m unittest discover -s tests
 python3 /home/ubuntu/skills/skill-creator/scripts/quick_validate.py .
 python3 scripts/create_manifest.py . -o /tmp/rea-manifest.json
 ```

@@ -26,7 +26,7 @@ It is not a magic source-code recovery tool. Treat decompiler output, inferred n
 - If a working `rea` CLI or REA MCP server is already available, use it directly; do not run setup before every task.
 - If unavailable and installation is authorized, use `npx -y rea-agents@latest` or install the official package. Setup is separate from provider installation and agent configuration.
 - Setup changes must be reviewed before applying. Do not silently install unrelated tools or proprietary analysis software.
-- REA needs Node.js 22.19+, 24.11+, or 26+ according to the current upstream README. Native deep analysis may additionally need Ghidra, Hopper, or IDA; use only legally obtained tools.
+- REA needs Node.js 22.23.4+, 24.22.1+, or 26.12.1+ according to the [upstream installation guide](https://github.com/morluto/rea/blob/main/docs/installation.md). Native deep analysis may additionally need Ghidra, Hopper, or IDA; use only legally obtained tools.
 - Use the connected server's actual advertised tools and schemas. Do not invent or call an unadvertised tool.
 
 ## Investigation workflow

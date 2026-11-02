@@ -11,6 +11,13 @@ def sha256(path: Path, chunk: int = 1024 * 1024) -> str:
             h.update(data)
     return h.hexdigest()
 
+def is_within_root(root: Path, path: Path) -> bool:
+    try:
+        path.resolve().relative_to(root)
+    except ValueError:
+        return False
+    return True
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("target", type=Path)
@@ -19,7 +26,9 @@ def main() -> int:
     root = args.target.resolve()
     if not root.exists():
         ap.error(f"target does not exist: {root}")
-    paths = [root] if root.is_file() else sorted(p for p in root.rglob("*") if p.is_file())
+    paths = [root] if root.is_file() else sorted(
+        p for p in root.rglob("*") if p.is_file() and is_within_root(root, p)
+    )
     records = []
     for path in paths:
         stat = path.stat()
